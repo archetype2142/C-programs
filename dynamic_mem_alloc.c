@@ -12,49 +12,52 @@ Description: Read the numbers from the input, put them
  		numbers avearage of numbers minimum maximum
 =======================================================*/
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
 
-void bsort(float [], int);
-float avgret(float [], int);
+float avgret(int [], int);
 
 int main() {
 
-	float array[4000];
-	int i = 0;
+	int *arr, max = 0, min = 0;
+	char temp[500];
+	arr = (int *)malloc(sizeof(int));
+	int i = -1;
 	
-	while(scanf("%f", &array[i])){
-		if(isdigit(array[i]))
-			break;
+	while(1) {
 		i++;
-	}
-	bsort(array, i);
+        arr = (int *)realloc(arr, (i + 1) * sizeof(int));
+        scanf("%s", temp);
+        if(temp[0] == '#') 
+        	break;
+        arr[i] = atoi(temp);
+    }
+
+    min = arr[0];
+    for (int k = 0 ; k < i ; k++) {
+        if (min > arr[k]) 
+        	min = arr[k];
+    }
+    max = arr[0];
+    for (int k = 0 ; k < i ; k++)
+    {
+        if (max < arr[k]) 
+        	max = arr[k];
+    }
 	printf("count: %d\n", i);
-	printf("avg: %f\n", avgret(array, i));
-	printf("min: %f\n", array[0]);
-	printf("max: %f\n", array[i - 1]);
+	printf("avg: %f\n", avgret(arr, i));
+	printf("min: %f\n", (float)min);
+	printf("max: %f\n", (float)max);
+
+	free(arr);
 	return 0;
 }
 
-float avgret(float arr[], int size) {
+float avgret(int arr[], int size) {
 	float sum = 0, avg = 0;
 	for (int i = 0; i < size; ++i) {
 		sum += arr[i];
 	}
 	avg = sum/size;
 	return avg;
-}
-
-void bsort(float arr[], int size) {
-    float temp;
-    for(int i = 0; i < size - 1; i++) {
-        for(int j = 0; j < size - i - 1; j++) {
-            if(arr[j] > arr[j + 1]) {
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
-    }
 }
