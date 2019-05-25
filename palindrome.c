@@ -1,3 +1,10 @@
+/*=================================================
+  File: palindrome.c 
+  Author: Ritwick Malhotra
+  Date:  Nov 2016
+
+  Assignment: check if a string is palindrome or not
+===================================================*/
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -13,37 +20,36 @@ int main() {
   if(strlen(str1)!=strlen(str2)) {
     printf("NO");
     exit(0);
- }
+  }
 
- count(str1, s1);
- count(str2, s2);
+  count(str1, s1);
+  count(str2, s2);
+  
+  for(i = 0; i < 26; ++i) {
+    if(s1[i] != s2[i]) {
+      flag = 0;
+      break;
+    }
+  }
 
-    for(i = 0; i < 26; ++i) {
-       if(s1[i] != s2[i]) {
-         flag = 0;
-         break;
-      }
-   }
-
-   if(flag)
-    printf("YES");
-   else
-    printf("NO");
-
- return 0;
+  if(flag) printf("YES");
+  else printf("NO");
+  
+  return 0;
 }
 
 void count(char str[],int s[]) {
-   int i = 0,j,count;
-   while(str[i] != '\0') {
-   j = 0;
-   count = 0;
-   while(str[j]!='\0') {
+  int i = 0,j,count;
+  while(str[i] != '\0') {
+    j = 0;
+    count = 0;
+    while(str[j]!='\0') {
       if(str[i] == str[j])
         count++;
       j++;
-   }
-  s[str[i]-97]=count;
-  i++;
-}
+    }
+  
+    s[str[i]-97]=count;
+    i++;
+  }
 }

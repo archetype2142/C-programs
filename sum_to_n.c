@@ -14,9 +14,8 @@ int main(){
 	int start, length, sum;
 	scanf("%d %d", &start, &length);
 
-	for(int i = start, j = 0; j < length; i++, j++){
+	for(int i = start, j = 0; j < length; i++, j++)
 		sum += i;
-	}
 
 	printf("%d", sum);
 	return 0;

@@ -1,4 +1,14 @@
-//a
+/*=================================================
+    File: array_of_strings_sort.c 
+    Author: Ritwick Malhotra
+    Date:  Nov 2016
+
+	Assignment: calculate max row and max column 
+	count by randomly generated square matrix 
+	within given limit eg: 
+	./program [size] [lower_lim] [upper_lim]
+	./program 5 1 100
+===================================================*/
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>

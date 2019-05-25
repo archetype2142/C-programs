@@ -1,3 +1,12 @@
+/*=================================================
+  File: count_sort.c 
+  Author: Ritwick Malhotra
+  Date:  Nov 2016
+
+  Assignment: count occurence of letters in a text
+  file input by user.
+===================================================*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -8,7 +17,7 @@ int main() {
   	struct alpha {
   		int character;
   		int occurance;
-  	}alph[123], temp;
+  	} alph[123], temp;
 
   	int count[256] = { 0 };
   	int k = 0, c = 0;

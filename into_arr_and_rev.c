@@ -1,7 +1,7 @@
 /*====================================================
-	      File: into_arr_and_rev.c 
-	    Author: Ritwick Malhotra
-          Date: 17 Nov 2016
+	File: into_arr_and_rev.c 
+	Author: Ritwick Malhotra
+    Date: 17 Nov 2016
 
 	Assignment: Read 10 integers (separated by new line)
 	 	from standard input. Put them into an array and
@@ -18,7 +18,6 @@ int main() {
 
 	ptr = &array[9];
 
-	for(int j = 9; j >= 0; --j) {
+	for(int j = 9; j >= 0; --j) 
 		printf("%d ", *ptr--);
-	}
 }
