@@ -1,3 +1,10 @@
+/*=================================================
+    File: check_file.c 
+    Author: Ritwick Malhotra
+    Date:  Nov 2016
+
+Assignment: Check existence of a file
+===================================================*/
 #include <stdio.h>
 
 int main(int argc, char const *argv[]) {
