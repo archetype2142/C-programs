@@ -32,12 +32,12 @@ int main() {
 
 void treeMaker(int size) {
 	for(int i = 1; i <= size; i++) {
-		for (int j = size; j > i; j--) {
+		for (int j = size; j > i; j--) 
 			printf("-");
-		}
-		for (int k = 1; k <= i; k++) {
+		
+		for (int k = 1; k <= i; k++) 
 			printf("*");
-		}
+		
 		printf("\n");
 	}
 }

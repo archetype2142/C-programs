@@ -1,9 +1,10 @@
 /*====================================================
-       File: leading_digit.c
-	 Author: Ritwick Malhotra
-       Date: 12 Nov 2016
- Assignment: EPFU Week 4 Functions: Leading digit
-Description: Design a function that takes an integer 
+    File: leading_digit.c
+	Author: Ritwick Malhotra
+    Date: 12 Nov 2016
+ 	
+ 	Assignment: EPFU Week 4 Functions: Leading digit
+	Description: Design a function that takes an integer 
 		as input and returns the leading digit (decimal 
 		representation assumed). Read integer from 
 		standard keyboard and use your function to 
@@ -21,8 +22,7 @@ int main() {
 }
 
 int leading_digit(int x) {
-    while (x > 9) {
+    while (x > 9) 
         x /= 10;
-    }
     return x;
 }

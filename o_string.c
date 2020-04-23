@@ -48,14 +48,11 @@ int main() {
 }
 
 void printy(char array[20][5], int flag) {
-	if(isdigit(*array[1])){
-		for(int j = 1; j <= flag; j++){
+	if(isdigit(*array[1]))
+		for(int j = 1; j <= flag; j++)
 			printf("%s\n", array[j]);
-		}
-	}	
-	else {
-		for(int j = 0; j <= flag - 1; j++){
+			
+	else 
+		for(int j = 0; j <= flag - 1; j++)
 			printf("%s\n", array[j]);
-		}
-	}
 }

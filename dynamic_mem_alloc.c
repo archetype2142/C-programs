@@ -1,11 +1,12 @@
 /*====================================================
-       File: dynamic_mem_alloc.c 
-     Author: Ritwick Malhotra
-       Date: 10 Dec 2016
+    File: dynamic_mem_alloc.c 
+    Author: Ritwick Malhotra
+    Date: 10 Dec 2016
 
- Assignment: EPFU 9 – memory management, i/o: 
-		Dynamic memory allocation 1
-Description: Read the numbers from the input, put them
+ 	Assignment: EPFU 9 – memory management, i/o: 
+	Dynamic memory allocation 1
+	
+	Description: Read the numbers from the input, put them
  		into the dynamicaly allocated array. Enlarge 
  		the array when needed. Stop reading the numbers
  		when the '#' character occurs. Write: number of
@@ -39,8 +40,7 @@ int main() {
         	min = arr[k];
     }
     max = arr[0];
-    for (int k = 0 ; k < i ; k++)
-    {
+    for (int k = 0 ; k < i ; k++) {
         if (max < arr[k]) 
         	max = arr[k];
     }
@@ -55,9 +55,8 @@ int main() {
 
 float avgret(int arr[], int size) {
 	float sum = 0, avg = 0;
-	for (int i = 0; i < size; ++i) {
+	for (int i = 0; i < size; ++i) 
 		sum += arr[i];
-	}
 	avg = sum/size;
 	return avg;
 }
